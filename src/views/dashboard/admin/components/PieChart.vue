@@ -20,7 +20,7 @@ export default {
     },
     height: {
       type: String,
-      default: '300px'
+      default: '400px'
     }
   },
   data() {
@@ -45,28 +45,41 @@ export default {
       this.chart = echarts.init(this.$el, 'macarons')
 
       this.chart.setOption({
+        title: {
+          text: '本月考勤统计',
+          left: 'center',
+          top: '0px',
+          textStyle: {
+            color: '#000'
+          }
+        },
         tooltip: {
           trigger: 'item',
-          formatter: '{a} <br/>{b} : {c} ({d}%)'
+          formatter: '{a} <br/>{b} : {c}'
         },
         legend: {
           left: 'center',
-          bottom: '10',
-          data: ['Industries', 'Technology', 'Forex', 'Gold', 'Forecasts']
+          bottom: '50',
+          data: ['9点前打卡', '外出', '请假', '九点后打卡', '迟到']
         },
         series: [
           {
-            name: 'WEEKLY WRITE ARTICLES',
+            name: '',
             type: 'pie',
-            roseType: 'radius',
-            radius: [15, 95],
+            radius: [70, 95],
             center: ['50%', '38%'],
+            avoidLabelOverlap: false,
+            itemStyle: {
+              borderRadius: 10,
+              borderColor: '#fff',
+              borderWidth: 2
+            },
             data: [
-              { value: 320, name: 'Industries' },
-              { value: 240, name: 'Technology' },
-              { value: 149, name: 'Forex' },
-              { value: 100, name: 'Gold' },
-              { value: 59, name: 'Forecasts' }
+              { value: 320, name: '9点前打卡' },
+              { value: 240, name: '外出' },
+              { value: 149, name: '请假' },
+              { value: 100, name: '九点后打卡' },
+              { value: 59, name: '迟到' }
             ],
             animationEasing: 'cubicInOut',
             animationDuration: 2600

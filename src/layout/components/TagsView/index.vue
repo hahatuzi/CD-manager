@@ -199,7 +199,7 @@ export default {
 
 <style lang="scss" scoped>
 .tags-view-container {
-  height: 34px;
+  height: 54px;
   width: 100%;
   background: #fff;
   border-bottom: 1px solid #d8dce5;
@@ -209,13 +209,13 @@ export default {
       display: inline-block;
       position: relative;
       cursor: pointer;
-      height: 26px;
-      line-height: 26px;
+      height: 40px;
+      line-height: 40px;
       border: 1px solid #d8dce5;
-      color: #495060;
+      color: #c1d1f3;
       background: #fff;
       padding: 0 8px;
-      font-size: 12px;
+      font-size: 15px;
       margin-left: 5px;
       margin-top: 4px;
       &:first-of-type {
@@ -225,9 +225,9 @@ export default {
         margin-right: 15px;
       }
       &.active {
-        background-color: #42b983;
+        background-color: #409eff;
         color: #fff;
-        border-color: #42b983;
+        border-color: #409eff;
         &::before {
           content: '';
           background: #fff;
@@ -278,9 +278,9 @@ export default {
       transition: all .3s cubic-bezier(.645, .045, .355, 1);
       transform-origin: 100% 50%;
       &:before {
-        transform: scale(.6);
+        transform: scale(.8);
         display: inline-block;
-        vertical-align: -3px;
+        vertical-align: -2px;
       }
       &:hover {
         background-color: #b4bccc;
